@@ -1,0 +1,35 @@
+{
+  "name": "steamworks-api",
+  "displayName": "SteamWorks API",
+  "version": "0.0.1",
+  "description": "Node package for SteamWorks API",
+  "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxgicoxx/steamworks-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xxgicoxx/steamworks-api/issues"
+  },
+  "homepage": "https://github.com/xxgicoxx/steamworks-api#readme",
+  "keywords": [
+    "steamworks-api",
+    "steam",
+    "steamworks",
+    "api"
+  ],
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
