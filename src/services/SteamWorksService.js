@@ -3,13 +3,13 @@ const request = require('request-promise-native');
 const { apiConfig } = require('../configs');
 
 class SteamWorksService {
-  constructor(config) {
-    this.config = config;
+  constructor(config = {}) {
+    this._config = config;
   }
 
-  async get(uri = '', options = {}, partner = false) {
+  async _get(uri = '', options = {}, partner = false) {
     try {
-      const qs = Object.assign(this.config, options);
+      const qs = Object.assign(this._config, options);
       const url = `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${uri}`;
       const result = await request.get({ url, qs });
 
@@ -19,9 +19,9 @@ class SteamWorksService {
     }
   }
 
-  async post(uri = '', options = {}, partner = false) {
+  async _post(uri = '', options = {}, partner = false) {
     try {
-      const qs = Object.assign(this.config, options);
+      const qs = Object.assign(this._config, options);
       const url = `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${uri}`;
       const result = await request.post({ url, qs });
 

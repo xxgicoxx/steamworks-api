@@ -2,35 +2,37 @@ const { SteamWorksService } = require('../services');
 
 class SteamController {
   /**
-    * Steam config.
-    * @param {String} config.key - steam key
+    * Steam config
+    *
+    * @param {!Object} config configs
+    * @param {!string} config.key steam key
     */
-  constructor(config) {
-    this.config = config;
+  constructor(config = {}) {
+    this._steamWorks = new SteamWorksService(config);
   }
 
   /**
     * SteamWorks API GET
     *
-    * @param {String} uri - uri string
-    * @param {Object} options - request params
-    * @param {Boolean} partner - is partner url?
+    * @param {!string} uri uri string
+    * @param {Object} [options] request params
+    * @param {Boolean} [partner = false] is partner url?
+    * @returns {Promise} return Promise
     */
   get(uri = '', options = {}, partner = false) {
-    const steamWorks = new SteamWorksService(this.config);
-    return steamWorks.get(uri, options, partner);
+    return this._steamWorks._get(uri, options, partner);
   }
 
   /**
     * SteamWorks API POST
     *
-    * @param {String} uri - uri string
-    * @param {Object} options - request params
-    * @param {Boolean} partner - is partner url?
+    * @param {!string} uri uri string
+    * @param {Object} [options] request params
+    * @param {Boolean} [partner = false] is partner url?
+    * @returns {Promise} return Promise
     */
   post(uri = '', options = {}, partner = false) {
-    const steamWorks = new SteamWorksService(this.config);
-    return steamWorks.post(uri, options, partner);
+    return this._steamWorks._post(uri, options, partner);
   }
 }
 
