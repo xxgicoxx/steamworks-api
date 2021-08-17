@@ -20,13 +20,17 @@ const steam = new Steam({
   key: 'STEAM_API_KEY',
 });
 
-steam.get('/IPlayerService/GetRecentlyPlayedGames/v1/', {
-  steamid: '76561198027639832',
-}, false).then((response) => {
-  console.log(response);
-}).catch((error) => {
-  console.error(error);
-});
+(async () => {
+  try {
+    const recentlyPlayedGames = await steam.get('/IPlayerService/GetRecentlyPlayedGames/v1/', { steamid: '76561198027639832' }, false);
+    console.log(recentlyPlayedGames);
+
+    const ownedGames = await steam.get('/IPlayerService/GetOwnedGames/v1/', { steamid: '76561198027639832' }, false);
+    console.log(ownedGames);
+  } catch (error) {
+    console.error(error);
+  }
+})();
 ```
 
 ### Response example

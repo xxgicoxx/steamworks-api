@@ -1,34 +1,24 @@
-const request = require('request-promise-native');
+const { request } = require('../utils');
 
 const { apiConfig } = require('../configs');
 
 class SteamWorksService {
   constructor(config = {}) {
-    this._config = config;
+    this.config = config;
   }
 
-  async _get(uri = '', options = {}, partner = false) {
-    try {
-      const qs = Object.assign(this._config, options);
-      const url = `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${uri}`;
-      const result = await request.get({ url, qs });
+  async get(endpoint = '', options = {}, partner = false) {
+    const qs = { ...this.config, ...options };
+    const result = await request({ url: `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${endpoint}`, qs });
 
-      return JSON.parse(result);
-    } catch (ex) {
-      throw new Error(ex);
-    }
+    return result;
   }
 
-  async _post(uri = '', options = {}, partner = false) {
-    try {
-      const qs = Object.assign(this._config, options);
-      const url = `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${uri}`;
-      const result = await request.post({ url, qs });
+  async post(endpoint = '', options = {}, partner = false) {
+    const qs = { ...this.config, ...options };
+    const result = await request({ url: `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${endpoint}`, method: 'POST', qs });
 
-      return JSON.parse(result);
-    } catch (ex) {
-      throw new Error(ex);
-    }
+    return result;
   }
 }
 
