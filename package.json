@@ -1,6 +1,6 @@
 {
   "name": "steamworks-api",
-  "displayName": "SteamWorks API",
+  "displayName": "steamworks-api",
   "version": "0.0.3",
   "description": "Node package for SteamWorks API",
   "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
