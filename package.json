@@ -2,7 +2,7 @@
   "name": "steamworks-api",
   "displayName": "steamworks-api",
   "version": "0.0.3",
-  "description": "Node package for SteamWorks API",
+  "description": "Steamworks Web API wrapper for Node.js",
   "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
   "license": "MIT",
   "main": "index.js",

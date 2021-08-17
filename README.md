@@ -1,5 +1,5 @@
 # steamworks-api
-Node package for SteamWorks API.
+Steamworks Web API wrapper for Node.js.
 
 <p align="center">
   <img src="assets/imgs/steam.png">
