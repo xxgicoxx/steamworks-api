@@ -2,7 +2,7 @@
 Node package for SteamWorks API.
 
 <p align="center">
-  <img src="https://i.imgur.com/sJWX3Q5.png">
+  <img src="assets/imgs/steam.png">
 </p>
 
 [Documentation](https://partner.steamgames.com/doc/webapi)
