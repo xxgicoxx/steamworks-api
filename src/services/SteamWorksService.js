@@ -9,7 +9,7 @@ class SteamWorksService {
 
   async get(endpoint = '', options = {}, partner = false) {
     const qs = { ...this.config, ...options };
-    const result = await request({ url: `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${endpoint}`, qs });
+    const result = await request({ url: `${partner === null || partner !== true ? apiConfig.url : apiConfig.partner}${endpoint}`, method: 'GET', qs });
 
     return result;
   }
