@@ -36,11 +36,11 @@ const steam = new Steam({
 
 (async () => {
   try {
-    const recentlyPlayedGames = await steam.get('/IPlayerService/GetRecentlyPlayedGames/v1/', { steamid: '76561198027639832' }, false);
-    console.log(recentlyPlayedGames);
+    const recentlyPlayedGames = await steam.get('/IPlayerService/GetRecentlyPlayedGames/v1/', { steamid: '76561198027639832' });
+    console.log(await recentlyPlayedGames.json());
 
-    const ownedGames = await steam.get('/IPlayerService/GetOwnedGames/v1/', { steamid: '76561198027639832' }, false);
-    console.log(ownedGames);
+    const ownedGames = await steam.get('/IPlayerService/GetOwnedGames/v1/', { steamid: '76561198027639832' });
+    console.log(await ownedGames.json());
   } catch (error) {
     console.error(error);
   }
