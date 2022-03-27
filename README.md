@@ -5,14 +5,28 @@ Steamworks Web API wrapper for Node.js.
   <img src="assets/imgs/steam.png">
 </p>
 
+# Docs
 [Documentation](https://partner.steamgames.com/doc/webapi)
 
-### Installation
+# Prerequisites
+* [Node.js](https://nodejs.org/en/)
+
+# Installation
 ````
 npm install steamworks-api
 ````
 
-### Example
+# Credentials
+### 1. Steam
+````
+# Account
+Create an Steam account on https://store.steampowered.com/.
+
+# API Key
+Create an API key on https://steamcommunity.com/login/home/?goto=%2Fdev%2Fapikey.
+````
+
+# Example
 ```javascript
 const Steam = require('steamworks-api');
 
@@ -33,7 +47,7 @@ const steam = new Steam({
 })();
 ```
 
-### Response example
+# Response example
 ````json
 { 
   "response": { 
@@ -55,11 +69,11 @@ const steam = new Steam({
 }
 ````
 
-### Built With
+# Built With
 * [Node.js](https://nodejs.org/en/)
 
-### Authors
-* **Giovani de Oliveira** - [xxgicoxx](https://github.com/xxgicoxx)
+# Authors
+* [xxgicoxx](https://github.com/xxgicoxx)
 
-### Acknowledgments
-* [FlatIcon](https://www.flaticon.com/) - Icon
+# Acknowledgments
+* [FlatIcon](https://www.flaticon.com/)
