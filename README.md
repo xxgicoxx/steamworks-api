@@ -6,7 +6,7 @@ Steamworks Web API wrapper for Node.js.
 </p>
 
 # Docs
-[Documentation](https://partner.steamgames.com/doc/webapi)
+* [Documentation](https://partner.steamgames.com/doc/webapi)
 
 # Prerequisites
 * [Node.js](https://nodejs.org/en/)
