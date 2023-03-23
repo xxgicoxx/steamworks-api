@@ -1,7 +1,7 @@
 {
   "name": "steamworks-api",
   "displayName": "steamworks-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Steamworks Web API wrapper for Node.js",
   "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
   "license": "MIT",

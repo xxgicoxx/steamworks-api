@@ -5,6 +5,9 @@ Steamworks Web API wrapper for Node.js.
   <img src="assets/imgs/steam.png">
 </p>
 
+# Features
+* Steamworks API endpoints
+
 # Docs
 * [Documentation](https://partner.steamgames.com/doc/webapi)
 
@@ -46,28 +49,6 @@ const steam = new Steam({
   }
 })();
 ```
-
-# Response example
-````json
-{ 
-  "response": { 
-    "total_count": 1, 
-    "games": [
-      {
-        "appid": 730,
-        "name": "Counter-Strike: Global Offensive",
-        "playtime_2weeks": 387,
-        "playtime_forever": 7201,
-        "img_icon_url": "69f7ebe2735c366c65c0b33dae00e12dc40edbe4",
-        "img_logo_url": "d0595ff02f5c79fd19b06f4d6165c3fda2372820",
-        "playtime_windows_forever": 1566,
-        "playtime_mac_forever": 3297,
-        "playtime_linux_forever": 0
-      }
-    ]
-  }
-}
-````
 
 # Built With
 * [Node.js](https://nodejs.org/en/)
